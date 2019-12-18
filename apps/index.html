@@ -41,6 +41,42 @@
     }, false);
 
 
+    // memo: 複数のカメラはまだ対応していない https://github.com/bigbluebutton/bigbluebutton/issues/6503
+    // var i = 1;
+    // var cam = "user";
+    // var $video = null;
+    // $start.addEventListener('click', () => {
+    //
+    //     navigator.mediaDevices.enumerateDevices()
+    //     .then(function(devices) {
+    //       devices.forEach(function(device) {
+    //         if(device.label.match(/camera2/g))
+    //         {
+    //           $video = document.getElementById('video_area'+i);  // 映像表示エリア
+    //           alert($video);
+    //
+    //           if(i % 2 == 0){ cam = "environment" };
+    //           alert(cam);
+    //           navigator.mediaDevices.getUserMedia({
+    //             video: {
+    //               deviceId: device.deviceId,
+    //               facingMode: {exact: cam},
+    //             },
+    //             audio: false
+    //           })
+    //           .then(stream => $video.srcObject = stream)
+    //           .catch(err => alert(`${err.name} ${err.message}`));
+    //
+    //           i = i + 1;
+    //         }
+    //       });
+    //     })
+    //     .catch(function(err) {
+    //       console.log(err.name + ": " + err.message);
+    //     });
+    //
+    // }, false);
+
     // 「静止画取得」ボタンが押されたら「<canvas id="capture_image">」に映像のコマ画像を表示します。
     function copyFrame() {
 
